@@ -1,5 +1,14 @@
-<nav>
-  <a routerLink="/">Dashboard</a> |
-  <a routerLink="/add-ticket">Add Ticket</a>
-</nav>
+<div class="topbar-container">
+  <nav class="topbar">
+    <a 
+      *ngFor="let link of navLinks" 
+      [routerLink]="link.path" 
+      routerLinkActive="active" 
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="topbar-link"
+    >
+      {{ link.label }}
+    </a>
+  </nav>
+</div>
 <router-outlet></router-outlet>
