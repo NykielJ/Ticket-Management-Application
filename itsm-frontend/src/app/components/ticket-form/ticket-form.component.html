@@ -1,0 +1,16 @@
+<div class="add-ticket-container">
+    <h2 class="form-header">Add New Ticket</h2>
+    <form (ngSubmit)="onSubmit()" class="add-ticket-form">
+        <div class="form-group">
+            <label class="form-label" for="title">Title</label>
+            <input class="form-input" id="title" type="text" [(ngModel)]="ticket.title" name="title" required>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" for="description">Description</label>
+            <textarea class="form-textarea" id="description" [(ngModel)]="ticket.description" name="description" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-button">Add Ticket</button>
+    </form>
+</div>

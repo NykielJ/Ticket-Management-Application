@@ -1,0 +1,136 @@
+.tickets-header {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.tickets-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ticket-item {
+    padding: 20px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.ticket-item:hover {
+    background-color: #e2e8f0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.ticket-header {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 16px;
+}
+
+.ticket-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.ticket-body {
+    margin-top: auto;
+}
+
+.ticket-description {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.ticket-createdAt {
+    font-size: 14px;
+    color: #000000;
+    font-style: italic;
+}
+
+.ticket-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.ticket-status {
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border: 1px solid #d1d5db;
+    background-color: #fff;
+    color: #374151;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.ticket-status:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+.btn-delete {
+    background: transparent;
+    border: none;
+    color: #666666;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-delete:hover {
+    color: #ef4444;
+    transform: scale(1.1);
+}
+
+.open {
+    background-color: #f59e0b;
+    color: #fff;
+}
+
+.open:hover {
+    background-color: #ffedd5;
+    color: #d97706;
+}
+
+.in-progress {
+    background-color: #3b82f6;
+    color: #fff;
+}
+
+.in-progress:hover {
+    background-color: #dbeafe;
+    color: #2563eb;
+}
+
+.closed {
+    background-color: #10b981;
+    color: #fff;
+}
+
+.closed:hover {
+    background-color: #d1fae5;
+    color: #047857;
+}

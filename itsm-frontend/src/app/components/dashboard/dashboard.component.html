@@ -1,0 +1,28 @@
+<ul class="tickets-list">
+    <li *ngFor="let ticket of tickets" class="ticket-item">
+      <div class="ticket-header">
+        <strong class="ticket-title">{{ ticket.title }}</strong>
+        <div class="ticket-body">
+          <p class="ticket-description">{{ ticket.description }}</p>
+          <small class="ticket-createdAt">{{ ticket.createdAt | date }}</small>
+        </div>
+      </div>
+      <div class="ticket-actions">
+        <select
+          title="Ticket Status"
+          class="ticket-status"
+          [ngClass]="ticket.status"
+          [(ngModel)]="ticket.status"
+          (change)="updateTicketStatus(ticket._id!, ticket.status)"
+        >
+          <option *ngFor="let status of statuses" [value]="status">
+            {{ status | titlecase }}
+          </option>
+        </select>
+        <button class="btn-delete" (click)="deleteTicket(ticket._id!)" title="Delete Ticket">
+          USUN
+        </button>
+      </div>
+    </li>
+  </ul>
+  
